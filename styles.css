@@ -1,0 +1,249 @@
+body {
+    font-family: 'Open Sans', 'Arial';
+}
+
+nav {
+    display: block;
+    unicode-bidi: isolate;
+    margin: 1px;
+    width: 300px;
+    border-right: 1px solid rgb(186, 186, 186);
+    border-bottom: 1px solid rgb(186, 186, 186);
+}
+
+#navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+nav > header {
+    display: block;
+    font-weight: bold;
+    font-size: 30px;
+    text-align: center;
+    line-height: 2;
+}
+
+nav > ul {
+    padding: 0;
+    list-style-type: none;
+    display: block;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    margin: 0;
+}
+
+nav > ul > li {
+    display: block;
+    line-height: 2;
+    border-top: 1px solid rgb(186, 186, 186);
+    font-size: 20px;
+}
+
+nav > ul > li > a {
+    text-decoration: none;
+    color: black;
+    padding-top: 5px;
+    padding-left: 30px;
+    padding-right: -30px;
+    display:inline-block;
+    width: calc(100% - 30px);
+}
+
+nav > ul > li > a:hover {
+    background-color: rgb(225, 225, 225);
+}
+
+img {
+    position: fixed;
+    height: 250px;
+    top: 450px;
+    left: 30px;
+}
+
+main {
+    display: block;
+    padding: 0 2.2em;
+    position: static;
+    min-width: 300px;
+    margin-left: 300px;
+}
+
+section > header {
+    font-size: 25px;
+    margin-top: 1.5em;
+}
+
+p {
+    padding: 0 1em;
+    display: block;
+    line-height: 1.5em;
+    font-size: 0.9em;
+    color: rgb(73, 73, 73);
+}
+
+code {
+    display: block;
+    color: rgb(73, 73, 73);
+    background-color: rgb(225, 225, 225);
+    font-size: 0.9em;
+    padding: 1.5em;
+    border-radius: 5px;
+    line-height: 1.7;
+    white-space: break-spaces;
+    position: relative;
+    word-break: normal;
+    word-wrap: normal;
+    overflow-wrap: break-word;
+    margin: 2em;
+}
+
+ul[id="references"] > li {
+    color: rgb(73,73,73);
+    font-size: 0.9em;
+    word-break: normal;
+    word-wrap: normal;
+    overflow-wrap: break-word;
+    line-height: 2em;
+    margin-bottom: 8px;
+    margin-left: -15px;
+}
+
+ul[id="references"] > li > a {
+    color: black;
+    text-decoration: none;
+}
+
+ul[id="references"] > li > a:hover {
+    color: blue;
+}
+
+@media only screen and (max-width: 1000px) {
+    html {
+        background-color: #192d25;
+    }
+    
+    body {
+        font-family: 'Open Sans', 'Arial';
+    }
+    
+    nav {
+        display: block;
+        unicode-bidi: isolate;
+        margin: 1px;
+        width: 300px;
+        border-right: 1px solid #316844;
+        border-bottom: 1px solid #316844;
+    }
+    
+    #navbar {
+        position: fixed;
+        top: 0;
+        left: 0;
+    }
+    
+    nav > header {
+        display: block;
+        font-weight: bold;
+        font-size: 30px;
+        text-align: center;
+        line-height: 2;
+        color: #409e61;
+    }
+    
+    nav > ul {
+        padding: 0;
+        list-style-type: none;
+        display: block;
+        margin-inline-start: 0px;
+        margin-inline-end: 0px;
+        margin: 0;
+    }
+    
+    nav > ul > li {
+        display: block;
+        line-height: 2;
+        border-top: 1px solid #316844;
+        font-size: 20px;
+    }
+    
+    nav > ul > li > a {
+        text-decoration: none;
+        color: #5f7c74;
+        padding-top: 5px;
+        padding-left: 30px;
+        padding-right: -30px;
+        display:inline-block;
+        width: calc(100% - 30px);
+    }
+    
+    nav > ul > li > a:hover {
+        background-color: rgb(225, 225, 225);
+    }
+    
+    img {
+        position: fixed;
+        height: 250px;
+        top: 450px;
+        left: 30px;
+    }
+    
+    main {
+        display: block;
+        padding: 0 2.2em;
+        position: static;
+        min-width: 300px;
+        margin-left: 300px;
+    }
+    
+    section > header {
+        font-size: 25px;
+        margin-top: 1.5em;
+        color: #409e61;
+    }
+    
+    p {
+        padding: 0 1em;
+        display: block;
+        line-height: 1.5em;
+        font-size: 0.9em;
+        color: #5f7c74;
+    }
+    
+    code {
+        display: block;
+        color: #5f7c74;
+        background-color: #1d453e;
+        font-size: 0.9em;
+        padding: 1.5em;
+        border-radius: 5px;
+        line-height: 1.7;
+        white-space: break-spaces;
+        position: relative;
+        word-break: normal;
+        word-wrap: normal;
+        overflow-wrap: break-word;
+        margin: 2em;
+    }
+    
+    ul[id="references"] > li {
+        color: #5f7c74;
+        font-size: 0.9em;
+        word-break: normal;
+        word-wrap: normal;
+        overflow-wrap: break-word;
+        line-height: 2em;
+        margin-bottom: 8px;
+        margin-left: -15px;
+    }
+    
+    ul[id="references"] > li > a {
+        color: #409e61;
+        text-decoration: none;
+    }
+    
+    ul[id="references"] > li > a:hover {
+        color: blue;
+    }
+}

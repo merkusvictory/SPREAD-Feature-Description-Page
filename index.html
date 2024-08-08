@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Techincal Document Page</title>
+  </head>
+  <body>
+    <nav id="navbar">
+      <header>SPREAD</header>
+      <ul>
+        <li>
+          <a class="nav-link" href="#Introduction">Introduction</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Diagnosis">Diagnosis</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Meal_Plan/Randomizer">Meal Plan/Randomizer</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Journal">Journal</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Consistency_Tracker">Consistency Tracker</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Productivity_Tracker">Productivity Tracker</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#Profile">Profile</a>
+        </li>
+        <li>
+          <a class="nav-link" href="#References">References</a>
+        </li>
+      </ul>
+    </nav>
+    <img src="https://i.imgur.com/RfPilAB.png">
+    <main id="main-doc">
+      <section class="main-section" id="Introduction">
+        <header>Introduction</header>
+        <article>
+          <p>SPREAD (Supporting, Planning, Recovering from Eating Disorders) aims to support and accompany Filipinos on their eating disorder recovery journey, especially for those who are unable to confide in others. It helps those with <b>anorexia nervosa</b> (the fear of gaining weight), <b>bulimia nervosa</b> (recurring episodes of eating large amounts of food and purging), and <b>binge-eating disorder</b> (the consuming of large amounts of food).</p>
+          <p>This program is patterned after already successful programs such as Recovery Road. It has the potential to be successful due to its ability to provide structure and guidance, nutritional benefits, mental health improvements, and motivations to the user.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Diagnosis">
+        <header>Diagnosis</header>
+        <article>
+            <p>From a list of symptoms, the user will go through each and input whether or not the symptom applies to them. </p>
+            <code>//Symptom 1
+Console.WriteLine("Symptom 1 of 23");
+Console.WriteLine("Alcohol and Drug Use");
+response = Console.ReadLine();
+if (response == "Y" || response == "y")
+    { countBulimia++; }</code>
+            <p>Once they have completed the list, SPREAD will give them a percent likelihood of having either anorexia nervosa, bulimia nervosa, or binge-eating disorder based on how many symptoms matched each disorder. The user is then unofficially “diagnosed” with the disorder with the highest percentage, and referred to a website with more information about that disorder. </p>
+            <code>//Determining Diagnosis
+if (percentAnorexia > percentBulimia)
+{
+    if (percentAnorexia > percentBingeEating)
+    { diagnosis = "Anorexia nervosa"; percentDiagnosis = percentAnorexia; }
+    else
+    { diagnosis = "Binge-eating disorder"; percentDiagnosis = percentBingeEating; }
+}
+else
+{
+    if (percentBulimia > percentBingeEating)
+    { diagnosis = "Bulimia nervosa"; percentDiagnosis = percentBulimia; }
+    else
+    { diagnosis = "Binge-eating disorder"; percentDiagnosis = percentBingeEating; }
+}</code>
+            <p>The diagnosis feature presents users with an unofficial diagnosis that they can further read upon so that they can decide whether or not to get officially diagnosed, as well as get an idea of what type of situation they are currently facing.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Meal_Plan/Randomizer">
+        <header>Meal Plan/Randomizer</header>
+        <article>
+            <p>Based on the eating disorder the user chooses, they will be able to pick a meal plan  specially-crafted for that disorder from a pool of seven different options. Each meal plan contains a breakfast, lunch, and dinner meal, along with the cooking recipes for each.</p>
+            <code>//Anorexia Meal Plan 1
+if (MPAchoice == 1)
+{
+    Console.WriteLine("BREAKFAST: ");
+    Console.WriteLine(System.IO.File.ReadAllText(@"mealsA/B1"));
+    Console.WriteLine("LUNCH: ");
+    Console.WriteLine(System.IO.File.ReadAllText(@"mealsA/L1"));
+    Console.WriteLine("DINNER: ");
+    Console.WriteLine(System.IO.File.ReadAllText(@"mealsA/D1"));
+}</code>
+            <p>If the user chooses to use the meal randomizer, they will be able to randomly generate a meal for their eating disorder from a pool of over sixty meals. </p>
+            <code>//Generating Random Anorexia Meal
+Console.WriteLine("You have chosen to be given a random meal! Please press any button to get your meal!");
+Console.ReadKey();
+Console.WriteLine(GenerateMealA());</code>
+            <p>They also have the ability to add custom meals to the randomizer, such as “fear foods” or food they avoid due to fear of weight gain, to encourage them to overcome these fears. The meal plan and randomizer aim to guide the user throughout their recovery journey, presenting them with healthy meal ideas tailored specifically to the eating disorder they are facing.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Journal">
+        <header>Journal</header>
+        <article>
+            <p>The user is able to input, edit, and view their own journal with ten different pages to write on. It can range from their thoughts, to their feelings about their recovery, etc. The journal serves as a way for them to document their experience in trying to recover from their eating disorder.</p>
+            <code>//Editing Journal Page 2
+if (pageEdit == 1)
+{
+    Console.WriteLine(System.IO.File.ReadAllText(@"titles/Journal"));
+    Console.WriteLine("SPREAD Journal");
+    Console.WriteLine("Page 2");
+    Console.WriteLine("*press ENTER when done*");
+    Console.WriteLine("Dear Journal,");
+    page2 = Console.ReadLine();
+}</code>
+        </article>
+      </section>
+      <section class="main-section" id="Consistency_Tracker">
+        <header>Consistency Tracker</header>
+        <article>
+            <p>The consistency tracker presents the user with the number of days they have been using the SPREAD application and their SPREAD streak, which is the number of consecutive days they have gone without relapsing.</p>
+            <code>//Consistency Tracker
+Console.WriteLine(System.IO.File.ReadAllText(@"titles/CT"));
+Console.WriteLine("Welcome to the Consistency Tracker");
+Console.WriteLine("This will track how many days you have gone without relapsing, aka your SPREAD Streak.");
+Console.WriteLine("This is day " + dayCounter + " of you using the SPREAD app!");
+Console.WriteLine("SPREAD Streak: " + SPREADstreak + " days");</code>
+            <p>By choosing to update their consistency tracker, they will add a new day to the counter and be asked whether or not they have relapsed. Based on their answers, the consistency tracker will update its records accordingly. Furthermore, they will be redirected to a list of Philippine hotlines if they relapse.</p>
+            <code>//Updating the SPREAD streak
+if (relapse == "N" || relapse == "n")
+{
+    SPREADstreak++;
+    Console.WriteLine("Good job! Another step towards recovery!");
+}
+else
+{
+    SPREADstreak = 0;
+    Console.WriteLine(@"We're sorry to hear that you've relapsed.
+Here are some hotlines to seek professional help.”);
+}</code>
+                <p>The consistency tracker aims to encourage the user to continue their recovery journey by allowing them to see how far they have come since they first joined SPREAD. The SPREAD streak can provide further motivation to not relapse, as it will reset to zero if ever they miss a day.</p>
+        </article>
+      </section>
+      <section class="main-section" id="Productivity_Tracker">
+        <header>Productivity Tracker</header>
+        <article>
+            <p>The productivity tracker lets the user set ten goals for themselves. With every goal completed, an ASCII art seedling will “grow”. When all ten goals are reached, the seedling will have become a full grown digital plant. </p>
+            <p>The productivity tracker aims to make the user more driven towards the goals they want to accomplish during their eating disorder recovery. It is not specific to eating disorder goals to encourage the user to cultivate their other hobbies and take their mind off the eating disorder every once in a while. The digital plant is a representation of their development, as it grows alongside them every step of the way.</p>
+            <code>//Productivity Tracker
+Console.WriteLine("Welcome to the Productivity Tracker!");
+Console.WriteLine("With each goal of your 10 goals completed, you will little by little grow a digital plant.");
+Console.WriteLine(currentPlant);
+Thread.Sleep(500);
+Console.ForegroundColor = ConsoleColor.Cyan;
+Console.WriteLine("Your 10 goals:");
+Console.WriteLine("[1] " + goal1 + " [" + goal1status + "]");
+Console.WriteLine("[2] " + goal2 + " [" + goal2status + "]");
+Console.WriteLine("[3] " + goal3 + " [" + goal3status + "]");
+...
+Console.WriteLine(counterPlant + " of 10 goals completed");</code>
+        </article>
+      </section>
+      <section class="main-section" id="Profile">
+        <header>Profile</header>
+        <article>
+            <p>The profile of the user displays their name, unofficially diagnosed eating disorder using the Diagnosis feature, the number of days they have been using SPREAD, and their SPREAD streak as explained in the Consistency Tracker. This feature simply aims to provide the user with the ability to view all their information in one place without having to find it in the menu. It aims to enhance the overall convenience and accessibility of the SPREAD application.</p>
+            <code>//Profile
+Console.WriteLine("Name: " + usernameCorrect);
+Console.WriteLine("Diagnosis: " + diagnosis);
+Console.WriteLine("Day " + dayCounter + " of using SPREAD");
+Console.WriteLine("SPREAD Streak: " + SPREADstreak + " days");
+Console.WriteLine(counterPlant + " of 10 goals completed");
+Console.WriteLine(logoplant);</code>
+        </article>
+      </section>
+      <section class="main-section" id="References">
+        <header>References</header>
+        <article>
+            <ul id="references">
+                <li>Anorexia nervosa - highest mortality rate of any mental disorder: Why? (2024, March 11). Eating Disorder Hope. <a href="https://www.eatingdisorderhope.com/information/anorexia/anorexia-death-rate">https://www.eatingdisorderhope.com/information/anorexia/anorexia-death-rate</a></li>
+                <li>Cornelissen, M. (2019). Investigating Prevalence of Disordered Eating and its Association to Risky Sexual Behaviour, in Filipino University Students. Universiteit Utrecht - Thesis for Clinical Psychology Masters <a href="https://studenttheses.uu.nl/bitstream/handle/20.500.12932/35817/Cornelissen%20(5683823)%20thesis.pdf">https://studenttheses.uu.nl/bitstream/handle/20.500.12932/35817/Cornelissen%20(5683823)%20thesis.pdf</a></li>
+                <li>Eating disorder statistics | anad—National association of anorexia nervosa and associated disorders. (2023, November 29). <a href="https://anad.org/eating-disorder-statistic/">https://anad.org/eating-disorder-statistic/</a></li>
+                <li>Eating disorders: About more than food - national institute of mental health(Nimh). (n.d.). Retrieved 15 March 2024, from <a href="https://www.nimh.nih.gov/health/publications/eating-disorders">https://www.nimh.nih.gov/health/publications/eating-disorders</a></li>
+                <li>Magdaraog-Mangila, S. R. (2014). The Beholder and the Beholden: The Portrayal of Beauty in the Context of Philippines Mass Media. Academia.edu. <a href="https://www.academia.edu/9161227">https://www.academia.edu/9161227</a></li>
+                <li>Pengpid, S., & Peltzer, K. (2018). Risk of disordered eating attitudes and its relation to mental health among university students in ASEAN. Eating and Weight Disorders - Studies on Anorexia, Bulimia and Obesity, 23(3), 349-355. <a href="https://doi.org/10.1007/s40519-018-0507-0">"https://doi.org/10.1007/s40519-018-0507-0"</a></li>
+                <li>Tadena, S., Kang, S. R., & Kim, S.-J. (2020). The Influence of Social Media Affinity on Eating Attitudes and Body Dissatisfaction in Philippine Adolescents. Child Health Nursing Research, 26(1), 121-129. <a href="https://doi.org/10.4094/chnr.2020.26.1.121">https://doi.org/10.4094/chnr.2020.26.1.121</a></li>
+                <li>The Best Eating Disorder Recovery Apps of 2022. (2019, May 24). Healthline. <a href="https://www.healthline.com/health/top-eating-disorder-iphone-android-apps?fbclid=IwAR1Dvlv_HqOrxAR354Xw-PWvrlyDmV5VfqprjSPEJO0LcuvQStEGcYatSBY#our-picks">https://www.healthline.com/health/top-eating-disorder-iphone-android-apps?fbclid=IwAR1Dvlv_HqOrxAR354Xw-PWvrlyDmV5VfqprjSPEJO0LcuvQStEGcYatSBY#our-picks</a></li>
+                <li>What is an eating disorder: Types, symptoms, risks, and causes. (2024, March 11). Eating Disorder Hope. <a href="https://www.eatingdisorderhope.com/information/eating-disorder">https://www.eatingdisorderhope.com/information/eating-disorder</a></li>
+            </ul>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
